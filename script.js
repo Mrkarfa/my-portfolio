@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Welcome to the portfolio of Souvik Karfa!");
 
-    // --- Lenis Smooth Scroll ---
+    // --- Lenis Smooth Scroll & GSAP Integration ---
     const lenis = new Lenis();
-    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-    requestAnimationFrame(raf);
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
 
     // --- GSAP Plugin Registration ---
-    gsap.registerPlugin(ScrollTrigger);
+    // Already done by including the script, but good practice to be explicit
+    // gsap.registerPlugin(ScrollTrigger);
+    // The above line is not needed if ScrollTrigger is in the same file or loaded before this script.
+    // Since we are using the CDN, it's globally available.
 
     // --- Dynamic Content Generation ---
     const skills = [
