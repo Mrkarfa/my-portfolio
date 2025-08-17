@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillsGrid = document.querySelector('.skills-grid');
     const projectsContainer = document.querySelector('.projects-container');
 
-    // Populate Skills with Icons
     skills.forEach(skill => {
         const skillElement = document.createElement('div');
         skillElement.classList.add('skill-item');
@@ -65,10 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- General Scroll-Triggered Animations ---
     const aboutTl = gsap.timeline({ scrollTrigger: { trigger: '#about', start: 'top 80%', end: 'top 50%', scrub: 1 } });
-    aboutTl.from('.about-left', { x: -100, opacity: 0 }).from('.about-right', { x: 100, opacity: 0 }, '<').from('.skill-item', { opacity: 0, y: 20, stagger: 0.1 }, '-=0.5');
+    aboutTl.from('.about-left', { autoAlpha: 0, x: -100 }).from('.about-right', { autoAlpha: 0, x: 100 }, '<').from('.skill-item', { autoAlpha: 0, y: 20, stagger: 0.1 }, '-=0.5');
+
     const contactTl = gsap.timeline({ scrollTrigger: { trigger: '#contact', start: 'top 80%' } });
-    contactTl.from('#contact h2', { opacity: 0, y: 50, duration: 1 }).from('#contact form input, #contact form textarea', { opacity: 0, x: -50, stagger: 0.2, duration: 0.8 }, '-=0.5').from('#contact .cta-button', { opacity: 0, scale: 0.5, duration: 0.8 }, '-=0.5').from('.social-links a', { opacity: 0, y: 20, stagger: 0.2 }, '-=0.5');
-    gsap.from('footer', { opacity: 0, y: 50, scrollTrigger: { trigger: 'footer', start: 'top 95%' } });
+    contactTl.from('#contact h2', { autoAlpha: 0, y: 50, duration: 1 })
+             .from('#contact form input, #contact form textarea', { autoAlpha: 0, x: -50, stagger: 0.2, duration: 0.8 }, '-=0.5')
+             .from('#contact .cta-button', { autoAlpha: 0, scale: 0.5, duration: 0.8 }, '-=0.5')
+             .from('.social-links a', { autoAlpha: 0, y: 20, stagger: 0.2 }, '-=0.5');
+
+    gsap.from('footer', { autoAlpha: 0, y: 50, scrollTrigger: { trigger: 'footer', start: 'top 95%' } });
 
     // --- Mobile Navigation ---
     const hamburger = document.querySelector('.hamburger');
