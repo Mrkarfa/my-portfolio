@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'HTML', icon: 'file-html' },
         { name: 'CSS', icon: 'file-css' },
         { name: 'JavaScript', icon: 'file-js' },
-        { name: 'React', icon: 'react-logo' },
-        { name: 'Node.js', icon: 'nodejs-logo' },
+        { name: 'React', icon: 'atom' },
+        { name: 'Node.js', icon: 'cube' },
         { name: 'MongoDB', icon: 'database' },
-        { name: 'TailwindCSS', icon: 'tailwind-logo'},
+        { name: 'TailwindCSS', icon: 'tailwind-logo' },
         { name: 'Bootstrap', icon: 'bootstrap-logo' },
         { name: 'PHP', icon: 'php-logo' },
         { name: 'SpringBoot', icon: 'leaf' },
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     skills.forEach(skill => {
         const skillElement = document.createElement('div');
         skillElement.classList.add('skill-item');
-        // Use innerHTML to add the icon and a span for the text
         skillElement.innerHTML = `<i class="ph-light ph-${skill.icon}"></i><span>${skill.name}</span>`;
         skillsGrid.appendChild(skillElement);
     });
