@@ -3,8 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Chris Kalafatis | Designer",
-  description: "Multi-disciplinary designer focusing on creating memorable web experiences, products, and brands.",
+  title: "Lunexa | AI Crypto Trading",
+  description: "Automate your crypto trading with Lunexa's powerful AI assistant. Connect your wallet, set your strategy, and let our AI handle the rest.",
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-satoshi antialiased bg-[#F2F2F2] text-black`}
+        className={`font-inter font-light antialiased bg-background text-primary`}
       >
         <Header />
         {children}
