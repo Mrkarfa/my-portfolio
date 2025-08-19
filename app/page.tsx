@@ -1,21 +1,28 @@
 import dynamic from 'next/dynamic';
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Capabilities from "@/components/Capabilities";
-import Contact from "@/components/Contact";
+import FeaturedIn from "@/components/FeaturedIn";
+import Testimonials from "@/components/Testimonials";
+import HowItWorks from "@/components/HowItWorks";
+import Features from "@/components/Features";
+import MissionStatement from "@/components/MissionStatement";
+import Pricing from "@/components/Pricing";
+import FAQ from "@/components/FAQ";
+import PageLayout from '@/components/PageLayout';
 
-const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
+// Footer is now handled by PageLayout
+// const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 export default function Home() {
   return (
-    <main>
+    <PageLayout>
       <Hero />
-      <About />
-      <Projects />
-      <Capabilities />
-      <Contact />
-      <Footer />
-    </main>
+      <FeaturedIn />
+      <HowItWorks />
+      <Features />
+      <Testimonials />
+      <MissionStatement />
+      <Pricing />
+      <FAQ />
+    </PageLayout>
   );
 }
