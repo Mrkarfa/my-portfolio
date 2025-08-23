@@ -10,17 +10,24 @@ const config: Config = {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        japanese: ['"Noto Sans JP"', 'sans-serif'],
       },
       colors: {
-        background: '#0D0D0D',
-        surface: '#1A1A1A',
-        primary: '#FFFFFF',
-        secondary: '#808080',
-        accent: '#00A8FF',
+        background: '#F5F5F5', // Off-white for a clean, serene base
+        surface: '#FFFFFF',
+        primary: '#FFB7C5', // Deep cherry blossom pink
+        secondary: '#2F4F4F', // Traditional indigo
+        accent: '#FFD700', // Gold
+        natural: '#8FBC8F', // Bamboo green
+        neutral: {
+          light: '#EAEAEA',
+          medium: '#D3D3D3',
+          dark: '#A9A9A9',
+        },
       },
       boxShadow: {
-        'neumorphic-light': '5px 5px 10px #0a0a0a, -5px -5px 10px #101010',
-        'neumorphic-light-inset': 'inset 5px 5px 10px #0a0a0a, inset -5px -5px 10px #101010',
+        'neumorphic-light': '5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff',
+        'neumorphic-light-inset': 'inset 5px 5px 10px #d9d9d9, inset -5px -5px 10px #ffffff',
       }
     },
   },
